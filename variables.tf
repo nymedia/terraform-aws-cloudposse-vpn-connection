@@ -121,11 +121,13 @@ variable "vpn_connection_tunnel1_cloudwatch_log_enabled" {
   description = "value"
   default     = null
 }
+
 variable "vpn_connection_tunnel1_cloudwatch_log_group_arn" {
   type        = string
   description = "value"
   default     = null
 }
+
 variable "vpn_connection_tunnel1_cloudwatch_log_output_format" {
   type        = string
   description = "value"
@@ -198,6 +200,27 @@ variable "vpn_connection_tunnel2_startup_action" {
   default     = "add"
 }
 
+variable "vpn_connection_tunnel2_cloudwatch_log_enabled" {
+  type        = bool
+  description = "value"
+  default     = null
+
+}
+
+variable "vpn_connection_tunnel2_cloudwatch_log_group_arn" {
+  type        = string
+  description = "value"
+  default     = null
+}
+
+variable "vpn_connection_tunnel2_cloudwatch_log_output_format" {
+  type        = string
+  description = "value"
+  default     = null
+}
+
+
+
 variable "existing_transit_gateway_id" {
   type        = string
   default     = ""
@@ -223,22 +246,4 @@ variable "transit_gateway_routes" {
   }))
   description = "A map of transit gateway routes to create on the given TGW route table (via `transit_gateway_route_table_id`) for the created VPN Attachment. Use the key in the map to describe the route."
   default     = {}
-}
-
-variable "vpn_connection_tunnel2_cloudwatch_log_enabled" {
-  type        = bool
-  description = "value"
-  default     = null
-}
-
-variable "vpn_connection_tunnel2_cloudwatch_log_group_arn" {
-  type        = string
-  description = "value"
-  default     = null
-}
-
-variable "vpn_connection_tunnel2_cloudwatch_log_output_format" {
-  type        = string
-  description = "value"
-  default     = null
 }
